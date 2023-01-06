@@ -1,20 +1,53 @@
-title: Nephelix Consulting
-description: A business home page starter template for Bootstrap 4 featuring marketing boxes and a full width image header.
-baseurl: ""
+baseurl: '/'
+permalink: pretty
+title: 'Jekyll Serif'
 domain: nephelix.com
 url: "https://nephelix.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-# disabled because we are using a custom domain
-#baseurl: /business-frontpage 
+logo:
+  mobile: "images/logo/logo-mobile.svg"
+  mobile_height: "32px"
+  mobile_width: "32px"
+  desktop: "images/logo/logo.svg"
+  desktop_height: "32px"
+  desktop_width: "120px"
 
-color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
+home: 
+  limit_services: 6
+
+collections:
+  services:
+    output: true
+    sort_by: weight
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
 
 sass:
-  sass_dir: /assets/css/_sass
-  style: compressed
+  style: compressed # possible values: nested expanded compact compressed
 
-include:
-  - _pages
+plugins:
+  - jekyll-environment-variables
 
 exclude:
-  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
