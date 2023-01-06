@@ -1,8 +1,8 @@
 baseurl: '/'
 permalink: pretty
 title: 'Jekyll Serif'
-domain: nephelix.com
-url: "https://nephelix.com" # the base hostname & protocol for your site, e.g. http://example.com
+#domain: nephelix.com
+#url: "https://nephelix.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 logo:
   mobile: "images/logo/logo-mobile.svg"
